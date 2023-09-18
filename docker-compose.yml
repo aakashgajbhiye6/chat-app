@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: "anu-project-v2"
+    build: C:\Users\USER\Documents\minepost\dockerfile
+    ports:
+      - "4200:80"
+    restart: on-failure
+    volumes:
+      - C:/Users/USER/Documents/minepost:/app
+    working_dir: /app
+  nginx:
+    image: "nginx:1.17.1-alpine"
+  

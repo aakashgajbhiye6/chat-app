@@ -1,0 +1,22 @@
+.with_image_card {
+  max-width: 400px;
+  margin: 1rem;
+}
+
+.with_text_card {
+  max-width: 400px;
+  margin: 1rem;
+  max-height: 200px;
+}
+
+
+.example-header-image {
+
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.template{
+  display: flex;
+  background-color: transparent;
+}

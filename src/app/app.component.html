@@ -1,0 +1,52 @@
+ <mat-toolbar color="primary" class="app-toolbar">
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>QKPost <small class="vr_name">(Beta)</small></span>
+  <span class="example-spacer"></span>
+<!--  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">-->
+<!--    <mat-icon>favorite</mat-icon>-->
+<!--  </button>-->
+<!--  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">-->
+<!--   <mat-icon>share</mat-icon>-->
+<!-- </button>-->
+</mat-toolbar>
+<div class="main_panel">
+
+<mat-card class="panel">
+  <mat-card-content>
+    <h2>Ignite Your Social Media Presence with QKPost</h2>
+    <mat-horizontal-stepper  headerPosition="top" #stepper>
+  <mat-step >
+     <ng-template matStepLabel>Welcome</ng-template>
+
+    <app-welcome> </app-welcome>
+
+  </mat-step>
+
+    <mat-step  >
+       <ng-template matStepLabel>Chose Engagement</ng-template>
+    <app-userinput></app-userinput>
+      <br>
+       <br>
+      <button mat-button matStepperPrevious color="accent">Back</button>
+        <button mat-button matStepperNext color="primary">Next</button>
+  </mat-step>
+  <mat-step >
+    <ng-template matStepLabel>Hot News</ng-template>
+    <app-news (OnNewsCLick)="OnNewsCLick($event)"></app-news>
+  </mat-step>
+
+
+</mat-horizontal-stepper>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="panel">
+  <mat-card-content>
+    <h2>Your networks</h2>
+    <app-posts [selected_news]="selected_news"></app-posts>
+  </mat-card-content>
+</mat-card>
+</div>

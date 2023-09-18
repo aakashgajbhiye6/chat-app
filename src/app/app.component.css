@@ -1,0 +1,32 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.panel{
+  padding: 10px;
+  margin: 50px;
+  width: 50%;
+  height: 90vh;
+  background-color: blanchedalmond;
+}
+
+.app_name{
+      margin: 15px 42px 12px 46px;
+}
+
+.vr_name{
+  color: lightgrey;
+  font-size: 1rem;
+}
+
+.main_panel{
+  display: flex;
+}
